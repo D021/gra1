@@ -1,9 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\CustomAssets\CharacterController\CharacterController.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\CustomAssets\CharacterController\CustomCharacterController.js">
     <Files>
-      <File FileName="Assets\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" Line="62" Column="3" />
-      <File FileName="Assets\CustomAssets\CharacterController\CharacterController.js" Line="23" Column="2" />
+      <File FileName="Assets\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" Line="1" Column="1" />
+      <File FileName="Assets\CustomAssets\CharacterController\CustomCharacterController.js" Line="17" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

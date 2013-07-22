@@ -24,7 +24,6 @@ function Movement()
 		vec = Vector3(Input.GetAxisRaw("Horizontal"),vec.y, Input.GetAxisRaw("Vertical"));
 		this.transform.Translate(vec.normalized * speed * Time.deltaTime);
 	}
-	if( Input. )
 }
 
 /*
