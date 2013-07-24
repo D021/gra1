@@ -1,9 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\CustomAssets\CharacterController\CustomCharacterController.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\CustomAssets\CharacterController\TreeCutter.js">
     <Files>
+      <File FileName="Assets\CustomAssets\CharacterController\TreeCutter.js" Line="28" Column="51" />
       <File FileName="Assets\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" Line="1" Column="1" />
-      <File FileName="Assets\CustomAssets\CharacterController\CustomCharacterController.js" Line="17" Column="1" />
+      <File FileName="Assets\CustomAssets\CharacterController\CustomCharacterController.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
