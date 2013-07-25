@@ -567,6 +567,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffccfe324bb2a6749b73dbd7412fd33d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FallingTreePrefab: {fileID: 400000, guid: 634b5b0460048b647a9e30c6fda43e29, type: 3}
 --- !u!1 &1979546909
 GameObject:
   m_ObjectHideFlags: 0

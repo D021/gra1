@@ -1,5 +1,7 @@
 ﻿#pragma strict
 
+public var FallingTreePrefab : Transform;
+
 function Update ()
 {
 	if( Input.GetMouseButtonDown(0) ) // LEFT CLICK
@@ -50,7 +52,6 @@ function Update ()
 			{
 				return;
 			}
-			Debug.Log("found the tree!");
 			
 			var tmp = new Array(trees);
 			tmp.RemoveAt(closestTreeIdx);
@@ -58,7 +59,10 @@ function Update ()
 			
 			var heights = terrain.GetHeights(0,0,0,0);
 			terrain.SetHeights(0,0,heights);
-			//Instantiate(FallingTreePrefab, closestTreePosition, Quaternion.identity);
+			
+			closestTreePos.y = Terrain.activeTerrain.SampleHeight(hit.point) -54.12927;
+			
+			GameObject.Instantiate(FallingTreePrefab, closestTreePos, Quaternion.identity);
 		}
 	}
 }
