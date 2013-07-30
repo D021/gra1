@@ -26,7 +26,7 @@ public class CanChopTree : MonoBehaviour
 	
 	void Update ()
 	{
-		if( Input.GetMouseButtonDown(0) ) // LEFT CLICK
+		if( Input.GetButtonDown("Fire1") )
 		{
 			TreeInstance[] trees = _terrainData.treeInstances;
 			RaycastHit hit;
@@ -53,7 +53,7 @@ public class CanChopTree : MonoBehaviour
 				for(var i=0; i<_treeList.Count; i++)
 				{
 					var currentTree = trees[i];
-					var currentTreeWorldPos = Vector3.Scale(currentTree.position, _terrainData.size);
+					var currentTreeWorldPos = Vector3.Scale(currentTree.position, _terrainData.size) + _terrain.GetPosition();
 					var distance = Vector3.Distance(currentTreeWorldPos, hit.point);
 					
 					if( distance < maxDistance )
@@ -79,6 +79,9 @@ public class CanChopTree : MonoBehaviour
 				{
 					return;
 				}
+				
+				Debug.Log (closestTreePos);
+				Debug.Log (hit.point);
 				
 				_treeList.RemoveAt(closestTreeIdx);
 				_terrainData.treeInstances = _treeList.ToArray();
