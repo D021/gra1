@@ -7,21 +7,23 @@ public class RunAndCrouch : MonoBehaviour
 {
 	private CharacterMotor _motor;
 	private Transform _transform;
-	private float dist;
+	private float _dist;
+	private float _maxForwardSpeed;
 	
 	public float WalkSpeed
 	{
-		get { return 7; }
+		//TODO: forward, backwards, sideways distinction
+		get { return _maxForwardSpeed; }
 	}
 	
 	public float RunSpeed
 	{
-		get { return 20; }
+		get { return WalkSpeed * 2; }
 	}
 	
 	public float CrouchSpeed
 	{
-		get { return 3; }
+		get { return WalkSpeed / 2; }
 	}
 	
 	public bool RequestsRun
@@ -44,15 +46,16 @@ public class RunAndCrouch : MonoBehaviour
 		get { return RequestsCrouch && _motor.grounded && _motor.canControl; }
 	}
 	
-	void Start () 
+	void Start() 
 	{
 		_motor =  GetComponent<CharacterMotor>();
 		_transform = transform;
 		CharacterController _controller = GetComponent<CharacterController>();
-		dist = _controller.height/2;
+		_dist = _controller.height/2;
+		_maxForwardSpeed = _motor.movement.maxForwardSpeed;
 	}
 	
-	void FixedUpdate ()
+	void FixedUpdate()
 	{
 		float vScale = 1.0f;
 		float speed;
@@ -72,6 +75,12 @@ public class RunAndCrouch : MonoBehaviour
 		}
 		
 		_motor.movement.maxForwardSpeed = speed;
+		
+		TransformCrouch(vScale);
+	}
+	
+	void TransformCrouch(float vScale)
+	{
 		float ultScale = _transform.localScale.y;
 		
 		Vector3 tmpScale = _transform.localScale;
@@ -80,7 +89,7 @@ public class RunAndCrouch : MonoBehaviour
 		tmpScale.y = Mathf.Lerp(_transform.localScale.y, vScale, 5 * Time.deltaTime);
 		_transform.localScale = tmpScale;
 		
-		tmpPosition.y += dist * (_transform.localScale.y - ultScale);   
+		tmpPosition.y += _dist * (_transform.localScale.y - ultScale);   
 		_transform.position = tmpPosition;
 	}
 }
