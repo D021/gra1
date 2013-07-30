@@ -2,7 +2,10 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\CustomAssets\Scripts\CanChopTree.cs">
     <Files>
-      <File FileName="Assets\CustomAssets\Scripts\CanChopTree.cs" Line="54" Column="15" />
+      <File FileName="Assets\Standard Assets\Character Controllers\Sources\Scripts\FPSInputController.js" Line="1" Column="1" />
+      <File FileName="Assets\Standard Assets\Character Controllers\Sources\Scripts\CharacterMotor.js" Line="586" Column="1" />
+      <File FileName="Assets\CustomAssets\Scripts\RunAndCrouch.cs" Line="54" Column="2" />
+      <File FileName="Assets\CustomAssets\Scripts\CanChopTree.cs" Line="33" Column="54" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
