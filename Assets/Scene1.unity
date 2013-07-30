@@ -575,6 +575,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ChoppedPrefabPostfix: Chopped
   MaximumDistance: 2
+  ChopSeconds: .5
+  ChopCount: 3
+  Enabled: 1
 --- !u!114 &1902934045
 MonoBehaviour:
   m_ObjectHideFlags: 0
