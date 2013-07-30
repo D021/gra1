@@ -2,9 +2,11 @@
 using System.Collections;
 using System.Collections.Generic;
 
+
 public class CanChopTree : MonoBehaviour
 {
 	public string ChoppedPrefabPostfix = "Chopped";
+	public float MaximumDistance = 2F;
 	
 	private Terrain _terrain;
 	private TerrainData _terrainData;
@@ -32,7 +34,7 @@ public class CanChopTree : MonoBehaviour
 			RaycastHit hit;
 			
 			Vector3 fwd = transform.TransformDirection(Vector3.forward);
-			if( Physics.Raycast(transform.position, fwd, out hit, 10F) )
+			if( Physics.Raycast(transform.position, fwd, out hit, MaximumDistance) )
 			{
 				if( hit.collider.name != _terrain.name )
 				{
@@ -49,6 +51,8 @@ public class CanChopTree : MonoBehaviour
 				var closestTreePos = Vector3.zero;
 				var closestTreeIdx = 0;
 				TreeInstance closestTree;
+				int x = 0,
+					y = 0;
 				
 				for(var i=0; i<_treeList.Count; i++)
 				{
@@ -62,6 +66,8 @@ public class CanChopTree : MonoBehaviour
 						closestTreeIdx = i;
 						closestTreePos = currentTreeWorldPos;
 						closestTree = currentTree;
+						x = (int) currentTree.position.x;
+						y = (int) currentTree.position.y;
 					}
 				}
 				
@@ -80,14 +86,11 @@ public class CanChopTree : MonoBehaviour
 					return;
 				}
 				
-				Debug.Log (closestTreePos);
-				Debug.Log (hit.point);
-				
 				_treeList.RemoveAt(closestTreeIdx);
 				_terrainData.treeInstances = _treeList.ToArray();
 				
-				float[,] heights = _terrainData.GetHeights(0, 0, 0, 0);
-                _terrainData.SetHeights(0, 0, heights);
+				float[,] heights = _terrainData.GetHeights(x, y, _terrainData.heightmapWidth, _terrainData.heightmapHeight);
+				_terrainData.SetHeights(x, y, heights);
 				
 				Instantiate(prefab, closestTreePos, Quaternion.identity);
 			}
