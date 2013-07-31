@@ -5,6 +5,8 @@ Project("{91E2C8E1-5BDE-5501-F24F-CC4E5B271D47}") = "Gra1", "Assembly-CSharp-fir
 EndProject
 Project("{91E2C8E1-5BDE-5501-F24F-CC4E5B271D47}") = "Gra1", "Assembly-CSharp-vs.csproj", "{58FDA9D0-DADF-9A9C-CF5E-109F2D8292CB}"
 EndProject
+Project("{91E2C8E1-5BDE-5501-F24F-CC4E5B271D47}") = "Gra1", "Assembly-CSharp-Editor-firstpass-vs.csproj", "{7BFDD817-1B75-6286-2A22-C99076915B04}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,11 +21,15 @@ Global
 		{58FDA9D0-DADF-9A9C-CF5E-109F2D8292CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58FDA9D0-DADF-9A9C-CF5E-109F2D8292CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58FDA9D0-DADF-9A9C-CF5E-109F2D8292CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BFDD817-1B75-6286-2A22-C99076915B04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BFDD817-1B75-6286-2A22-C99076915B04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BFDD817-1B75-6286-2A22-C99076915B04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BFDD817-1B75-6286-2A22-C99076915B04}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																																														GlobalSection(MonoDevelopProperties) = preSolution
+																																																						GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
