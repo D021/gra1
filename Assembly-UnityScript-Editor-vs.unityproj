@@ -167,6 +167,12 @@
  <Reference Include="Assembly-UnityScript">
  <HintPath>Library\ScriptAssemblies\Assembly-UnityScript.dll</HintPath>
  </Reference>
+ <Reference Include="DecalSystem.Runtime">
+ <HintPath>Assets\Plugins\Decal System\DecalSystem.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="DecalSystem.Editor">
+ <HintPath>Assets\Plugins\Editor\Decal System\DecalSystem.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>D:\Engines\Unity\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
  </Reference>
@@ -184,12 +190,6 @@
  </Reference>
  <Reference Include="UnityEditor.Android.Extensions">
  <HintPath>D:\Engines\Unity\Editor\Data\PlaybackEngines\AndroidPlayer\EditorExtensions\UnityEditor.Android.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="DecalSystem.Editor">
- <HintPath>Assets\Plugins\Editor\Decal System\DecalSystem.Editor.dll</HintPath>
- </Reference>
- <Reference Include="DecalSystem.Runtime">
- <HintPath>Assets\Plugins\Decal System\DecalSystem.Runtime.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
