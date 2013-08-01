@@ -51,6 +51,7 @@
      <Compile Include="Assets\Decal System Demos\Scripts\Bullet\ColoredBulletExampleCS.cs" />
      <Compile Include="Assets\Decal System Demos\Scripts\Bullet\SkinnedBulletExampleCS.cs" />
      <Compile Include="Assets\Decal System Demos\Scripts\ScreenLock.cs" />
+     <Compile Include="Assets\Mecanim Warrior Anim Free\Script\PlayGUI.cs" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Particle Shaders\Mobile Multiply Culled.shader" />

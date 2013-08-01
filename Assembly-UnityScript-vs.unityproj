@@ -47,6 +47,7 @@
      <Compile Include="Assets\Decal System Demos\Scripts\Bullet\BulletExampleDynamicJS.js" />
      <Compile Include="Assets\Decal System Demos\Scripts\Bullet\BulletExampleDynamicObjectJS.js" />
      <Compile Include="Assets\Decal System Demos\Scripts\Bullet\BulletExampleJS.js" />
+     <Compile Include="Assets\Mecanim Warrior Anim Free\Script\MouseOrbit.js" />
      <Compile Include="Assets\Standard Assets (Mobile)\Scripts\CameraRelativeControl.js" />
      <Compile Include="Assets\Standard Assets (Mobile)\Scripts\FirstPersonControl.js" />
      <Compile Include="Assets\Standard Assets (Mobile)\Scripts\FollowTransform.js" />

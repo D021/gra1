@@ -5216,10 +5216,10 @@ Animator:
   m_GameObject: {fileID: 100350}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: bf09797d24aaa7b4daef05fc37b21fa8, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 893ea4ec925a14949ad737db60e091a7, type: 2}
   m_CullingMode: 1
   m_ApplyRootMotion: 1
-  m_AnimatePhysics: 0
+  m_AnimatePhysics: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
