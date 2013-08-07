@@ -3,12 +3,18 @@ using System.Collections;
 
 [RequireComponent (typeof (CharacterMotor))]
 [RequireComponent (typeof (CharacterController))]
+[RequireComponent (typeof (Animator))]
 public class RunAndCrouch : MonoBehaviour
 {
 	private CharacterMotor _motor;
 	private Transform _transform;
 	private float _dist;
 	private float _maxForwardSpeed;
+	private Animator _animator;
+    
+    private int _speedId;
+    private int _agularSpeedId;
+    private int _directionId;
 	
 	public float WalkSpeed
 	{
@@ -53,6 +59,11 @@ public class RunAndCrouch : MonoBehaviour
 		CharacterController _controller = GetComponent<CharacterController>();
 		_dist = _controller.height/2;
 		_maxForwardSpeed = _motor.movement.maxForwardSpeed;
+		_animator = GetComponent<Animator>();
+
+        _speedId = Animator.StringToHash("Speed");
+        _agularSpeedId = Animator.StringToHash("AngularSpeed");
+        _directionId = Animator.StringToHash("Direction");
 	}
 	
 	void FixedUpdate()
@@ -75,6 +86,7 @@ public class RunAndCrouch : MonoBehaviour
 		}
 		
 		_motor.movement.maxForwardSpeed = speed;
+		Animate();
 		
 		TransformCrouch(vScale);
 	}
@@ -91,5 +103,31 @@ public class RunAndCrouch : MonoBehaviour
 		
 		tmpPosition.y += _dist * (_transform.localScale.y - ultScale);   
 		_transform.position = tmpPosition;
+	}
+	
+	void Animate()
+	{
+        float h = Input.GetAxis("Horizontal");
+        float v = Input.GetAxis("Vertical");
+
+        float speed = (h * h + v * v) * 6;
+        float direction = Mathf.Atan2(h, v) * 180.0f / 3.14159f;
+		
+        AnimatorStateInfo state = _animator.GetCurrentAnimatorStateInfo(0);
+
+        bool inTransition = _animator.IsInTransition(0);
+        bool inIdle = state.IsName("Locomotion.Idle");
+        bool inTurn = state.IsName("Locomotion.TurnOnSpot") || state.IsName("Locomotion.PlantNTurnLeft") || state.IsName("Locomotion.PlantNTurnRight");
+        bool inWalkRun = state.IsName("Locomotion.WalkRun");
+
+        float speedDampTime = inIdle ? 0 : 0.1f;
+        float angularSpeedDampTime = inWalkRun || inTransition ? 0.25f : 0;
+        float directionDampTime = inTurn || inTransition ? 1000000 : 0;
+
+        float angularSpeed = direction / 0.2f;
+        
+        _animator.SetFloat(_speedId, speed, speedDampTime, Time.deltaTime);
+        _animator.SetFloat(_agularSpeedId, angularSpeed, angularSpeedDampTime, Time.deltaTime);
+        _animator.SetFloat(_directionId, direction, directionDampTime, Time.deltaTime);
 	}
 }

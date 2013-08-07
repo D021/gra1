@@ -1,0 +1,115 @@
+fileFormatVersion: 2
+guid: c33a71f5209228146a76d1a9984c7dcc
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: BasePost
+    100002: PoleHole
+    100004: Post0Peg
+    100006: Post1Peg
+    100008: Post1Peg_001
+    100010: Post2Peg
+    100012: //RootNode
+    100014: RopeCurved
+    100016: RopeCurved_001
+    100018: RopeFence1
+    100020: RopeFence2
+    100022: RopeFence3
+    400000: BasePost
+    400002: PoleHole
+    400004: Post0Peg
+    400006: Post1Peg
+    400008: Post1Peg_001
+    400010: Post2Peg
+    400012: //RootNode
+    400014: RopeCurved
+    400016: RopeCurved_001
+    400018: RopeFence1
+    400020: RopeFence2
+    400022: RopeFence3
+    2300000: BasePost
+    2300002: PoleHole
+    2300004: Post0Peg
+    2300006: Post1Peg
+    2300008: Post1Peg_001
+    2300010: Post2Peg
+    2300012: RopeCurved
+    2300014: RopeCurved_001
+    2300016: RopeFence1
+    2300018: RopeFence2
+    2300020: RopeFence3
+    3300000: BasePost
+    3300002: PoleHole
+    3300004: Post0Peg
+    3300006: Post1Peg
+    3300008: Post1Peg_001
+    3300010: Post2Peg
+    3300012: RopeCurved
+    3300014: RopeCurved_001
+    3300016: RopeFence1
+    3300018: RopeFence2
+    3300020: RopeFence3
+    4300000: RopeCurved
+    4300002: BasePost
+    4300004: Post2Peg
+    4300006: Post1Peg
+    4300008: Post0Peg
+    4300010: PoleHole
+    4300012: RopeFence1
+    4300014: Post1Peg_001
+    4300016: RopeCurved_001
+    4300018: RopeFence2
+    4300020: RopeFence3
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 2
+  userData: 
